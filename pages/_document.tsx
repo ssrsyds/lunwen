@@ -8,7 +8,7 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           <meta
             name="description"
-            content="周报通,周报生成器,周报通,帮你生成完整周报"
+            content="学术论文TOOL"
           />
          {/* Global Site Tag (gtag.js) - Google Analytics */}
          <script
