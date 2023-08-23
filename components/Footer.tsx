@@ -31,18 +31,18 @@ export default function Footer() {
         </a>
       </div> */}
       <div>
-        <Link href="mailto:zhoubaotong.com@gmail.com" target="_blank">zhoubaotong.com@gmail.com</Link>
+        <Link href="2337971460@qq.com" target="_blank">2337971460@qq.com</Link>
         {host && ['zhoubaotong.com', 'zhoubaotong.cn'].includes(host) && (
           <>
             <label className="px-2">|</label>
-            <Link href="https://beian.miit.gov.cn" target="_blank" rel="noopener noreferrer">粤ICP备20029152号</Link>
+            <Link href="https://beian.miit.gov.cn" target="_blank" rel="noopener noreferrer">皖ICP备2023001879号</Link>
           </>
         )}
       </div>
       <div className="flex space-x-4 pb-4 sm:pb-0">
         <Link
           target="_blank"
-          href="https://github.com/alvinxdev/zhoubaotong"
+          href="https://ai.yjie.fun/#/chat"
           className="group"
           aria-label="TaxPal on GitHub"
         >
