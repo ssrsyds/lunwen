@@ -8,7 +8,7 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           <meta
             name="description"
-            content="学术论文TOOL"
+            content="学术论文助手"
           />
          {/* Global Site Tag (gtag.js) - Google Analytics */}
          <script
