@@ -1,6 +1,6 @@
 {
   "Index": {
-    "title": "学术论文TOOL",
+    "title": "学术论文助手",
     "switchLocale": "",
     "deployWiki": "部署自己的网站？",
     "description1": "简单描述论文内容 ",
@@ -8,10 +8,10 @@
     "slogan": "一写论文就头大？我来帮你！",
     "step0": "粘贴你的 OpenAI API Key (新手可善用搜索引擎自行购买)",
     "openaiApiKeyPlaceholder": "sk-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "step1": "简单描述一下你的工作内容",
+    "step1": "简单描述一下你的论文要求",
     "helpPageLink": "(点击这里查看教程)",
-    "placeholder": "比如：修复了优惠券无法领取的bug，为产品部的新APP设计UI和图标，负责跟进部门前端工程师的招聘",
-    "defaultchat": "修复了优惠券无法领取的bug，为产品部的新APP设计UI和图标，负责跟进部门前端工程师的招聘",
+    "placeholder": "请完整描述一下你的论文要求和方向,以及所需字数",
+    "defaultchat": "请完整描述一下你的论文要求和方向,以及所需字数",
     "step2": "选择输出结果的形式。",
     "simplifierButton": "生成完整论文",
     "simplifiedContent": "优化后的内容",
