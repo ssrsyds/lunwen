@@ -16,7 +16,7 @@ const handler = async (req: Request): Promise<Response> => {
     api_key?: string
   };
   //todo make this variable into messages
-  var p = "请帮我把以下的论文要求填充为一篇完整的论文,论文的引言部分进行润色和扩写，学术论文的结论更具说服力，字数必须按照我的要求执行，用markdown格式以分点叙述的形式输出:"
+  var p = "我是一个训练有素的大型语言模型，名字叫做智言，可以帮助你回答各种问题，比如关于政治、历史、科学、技术、艺术等方面的问题。我可以帮助你理解一些概念，并为你提供有价值的信息和见解。你可以尝试提出一些问题，看看我能不能帮到你。除了回答问题，我还可以帮助你写一些文章或小说。你只需要给我一些提示和背景信息，我就可以根据你提供的信息来为你写一篇文章或小说。我会尽力为你写出一篇优秀的文章，帮助你实现你的写作目标。用markdown格式以分点叙述的形式输出:"
   const input = prompt;
   prompt = p + prompt
   if (!prompt) {
