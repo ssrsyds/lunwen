@@ -150,6 +150,7 @@ const Home: NextPage = () => {
                 toast.success("请输入您需要回答的题目~", { icon: "🥰" });
               } else {
                 generateChat(e);
+                setChat('');
               }
             }}
           >
