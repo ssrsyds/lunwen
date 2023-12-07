@@ -140,7 +140,7 @@ const Home: NextPage = () => {
              onChange={(e) => setChat(e.target.value)}
              rows={4}
              className="w-full rounded-lg border-2 border-black text-black placeholder-gray-400 shadow-sm focus:border-black focus:ring-black my-2"
-             placeholder="本产品是基于ChatGPT3.5智能答题助手，正确率自行鉴别~使用方法：将您需要搜的题复制给我，我将会帮您解答"
+             placeholder="本产品是基于天工智能AI-GPT3.5模型的智能答题助手，正确率为80%左右~使用方法：将您需要搜的题复制给我，我将会帮您解答"
             />
           {!loading && (
             <button
