@@ -16,7 +16,7 @@ const handler = async (req: Request): Promise<Response> => {
     api_key?: string
   };
   //todo make this variable into messages
-  var p = "你现在需要充当一个答题助手，你可以处理单选，多选，判断，问答，编程，计算，翻译，语数英物理化，技能证书题等所有类型以及专业性的题目。尽量简明扼要地回答，不能胡乱回答，务必保证正确率。先给我正确的答案，答案下面是题目解析，尽量简单易懂一点。数理化类或者其他需要计算的题需要详细计算过程。如果是问答题，请尽量控制在200字以内。"
+  var p = "你现在需要充当一个答题助手。不能胡乱回答，务必保证正确率。先给我正确的答案，答案下面是题目解析。数理化类或者其他需要计算的题需要详细计算过程。如果是问答题，请尽量控制在200字以内。"
   const input = prompt;
   prompt = p + prompt
   if (!prompt) {
@@ -30,10 +30,10 @@ const handler = async (req: Request): Promise<Response> => {
   const payload: OpenAIStreamPayload = {
     model: process.env.OPENAI_MODEL,
     messages: [{
-      role: "user",
+      role: "system",
       content: prompt
     }],
-    temperature: 0.7,
+    temperature: 0.5,
     top_p: 1,
     frequency_penalty: 0,
     presence_penalty: 0,
