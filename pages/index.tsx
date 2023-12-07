@@ -160,7 +160,7 @@ const Home: NextPage = () => {
           <br></br><br></br>
            <div style={{ color: 'lightgrey', fontSize: '14px' }}>
              本产品基于
-             <a href="#" style={{ color: 'lightblue' }}>《天工智能AI助手》</a>研发
+             <a href="https://ai1.yjie.fun/" style={{ color: 'lightblue' }}>《天工智能AI助手》</a>研发
            </div>
           {loading && (
             <button
