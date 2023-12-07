@@ -111,13 +111,7 @@ const Home: NextPage = () => {
 
       <Header />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">
-
-        <h1 className="sm:text-6xl text-4xl max-w-2xl font-bold text-slate-900">
-          {t('description1')} <br></br><div               className=" px-4 py-2 sm:mt-3 mt-8 hover:bg-black/80 w-full"></div>{t('description2')}
-        </h1>
-        <p className="text-slate-500 mt-5">{t('slogan')}</p>
-
-
+      <img src="https://linglu.pro/public/linglu.png" alt="Your Image" style={{ width: '170px', height: '65px', marginRight: '5px' }} />
         <div className="max-w-xl w-full">
         { useUserKey &&(
             <>
@@ -153,14 +147,14 @@ const Home: NextPage = () => {
           </div>
 
           <textarea
-            value={chat}
-            onChange={(e) => setChat(e.target.value)}
-            rows={4}
-            className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-2"
-            placeholder={
-              t('placeholder')
-            }
-          />
+  value={chat}
+  onChange={(e) => setChat(e.target.value)}
+  rows={4}
+  className="w-full rounded-lg border-2 border-black text-black placeholder-gray-400 shadow-sm focus:border-black focus:ring-black my-2"
+  placeholder="描述下你的需求，例如：帮我写一份某某宣传文案；一封给老师的感谢信、一篇励志的故事；一篇完整的周报：修复某某BUG，设计某某图标；一首关于母亲的中文歌或诗词等等"
+/>
+
+
 
           {!loading && (
             <button
@@ -213,7 +207,7 @@ const Home: NextPage = () => {
                       className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border"
                       onClick={() => {
                         navigator.clipboard.writeText(generatedChat.trim());
-                        toast("论文内容复制成功！", {
+                        toast("内容复制成功！", {
                           icon: "✂️",
                         });
                       }}
