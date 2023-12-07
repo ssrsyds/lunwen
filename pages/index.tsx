@@ -140,7 +140,7 @@ const Home: NextPage = () => {
              onChange={(e) => setChat(e.target.value)}
              rows={4}
              className="w-full rounded-lg border-2 border-black text-black placeholder-gray-400 shadow-sm focus:border-black focus:ring-black my-2"
-             placeholder="本产品是基于天工智能AI-GPT3.5模型的免费公益版智能答题助手，正确率为80%左右~使用方法：将您需要搜的题复制给我，我将会帮您解答"
+             placeholder="我基于GPT3.5模型，我是完全免费的公益版AI智能答题小助手，拥有正确率为80%左右的解答能力~使用方法：将您需要搜的题复制给我，我将会帮您解答"
             />
           {!loading && (
             <button
@@ -157,6 +157,11 @@ const Home: NextPage = () => {
             {t('simplifierButton')} &rarr;
           </button>
           )}
+          <br></br><br></br>
+           <div style={{ color: 'lightgrey', fontSize: '14px' }}>
+             本产品是基于ChatGPT3.5模型的
+             <a href="#" style={{ color: 'lightblue' }}>《天工智能AI助手》</a>附属版的智能答题助手
+           </div>
           {loading && (
             <button
               className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
