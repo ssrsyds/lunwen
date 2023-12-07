@@ -131,38 +131,30 @@ const Home: NextPage = () => {
                   }
                 />
             </>)
-          }
+          }<br></br>
 
-          <div className="flex mt-10 items-center space-x-3">
-            <Image
-              src="/1-black.png"
-              width={30}
-              height={30}
-              alt="1 icon"
-              className="mb-5 xs:mb-0"
-            />
-            <p className="text-left font-medium">
-              {t('step1')}{" "}
-            </p>
-          </div>
+          
 
           <textarea
-  value={chat}
-  onChange={(e) => setChat(e.target.value)}
-  rows={4}
-  className="w-full rounded-lg border-2 border-black text-black placeholder-gray-400 shadow-sm focus:border-black focus:ring-black my-2"
-  placeholder="描述下你的需求，例如：帮我写一份某某宣传文案；一封给老师的感谢信、一篇励志的故事；一篇完整的周报：修复某某BUG，设计某某图标；一首关于母亲的中文歌或诗词等等"
-/>
-
-
-
+             value={chat}
+             onChange={(e) => setChat(e.target.value)}
+             rows={4}
+             className="w-full rounded-lg border-2 border-black text-black placeholder-gray-400 shadow-sm focus:border-black focus:ring-black my-2"
+             placeholder="温馨提示:本产品基于ChatGPT3.5模型，正确率自行鉴别~"
+            />
           {!loading && (
             <button
-              className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-5 mt-8 hover:bg-black/80 w-full"
-              onClick={(e) => generateChat(e)}
-            >
-              {t('simplifierButton')} &rarr;
-            </button>
+            className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-5 mt-8 hover:bg-black/80 w-full"
+            onClick={(e) => {
+              if (!chat.trim()) {
+                toast.success("请输入您需要回答的题目~", { icon: "🥰" });
+              } else {
+                generateChat(e);
+              }
+            }}
+          >
+            {t('simplifierButton')} &rarr;
+          </button>
           )}
           {loading && (
             <button
@@ -174,17 +166,6 @@ const Home: NextPage = () => {
           )}
           <br></br>
           <br></br>
-          <div className="mt-1 items-center space-x-3">
-            <span className="text-slate-200">
-                {t('privacyPolicy1')}
-              <a
-                className="text-blue-200 hover:text-blue-400"
-                href="https://github.com/alvinxdev/zhoubaotong/blob/main/privacy.md"
-                target="_blank"
-                rel="noopener noreferrer"
-              >{' '}{t('privacyPolicy2')}</a>
-            </span>
-          </div>
         </div>
         <Toaster
           position="top-center"
@@ -197,11 +178,6 @@ const Home: NextPage = () => {
             <motion.div className="space-y-10 my-10">
               {generatedChat && (
                 <>
-                  <div>
-                    <h2 className="sm:text-4xl text-3xl font-bold text-slate-900 mx-auto">
-                      {t('simplifiedContent')}
-                    </h2>
-                  </div>
                   <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
                     <div
                       className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border"
