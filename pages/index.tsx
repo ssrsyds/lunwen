@@ -159,8 +159,8 @@ const Home: NextPage = () => {
           )}
           <br></br><br></br>
            <div style={{ color: 'lightgrey', fontSize: '14px' }}>
-             本产品是基于ChatGPT3.5模型的
-             <a href="#" style={{ color: 'lightblue' }}>《天工智能AI助手》</a>附属版的智能答题助手
+             本产品基于
+             <a href="#" style={{ color: 'lightblue' }}>《天工智能AI助手》</a>研发
            </div>
           {loading && (
             <button
