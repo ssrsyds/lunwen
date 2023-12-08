@@ -16,7 +16,7 @@ const handler = async (req: Request): Promise<Response> => {
     api_key?: string
   };
   //todo make this variable into messages
-  var p = "你现在充当一个答题助手,每次回答都需要适当加入emoji。不能胡乱回答，务必保证正确率(请注意用户提供的是多选题，还是单选题或者判断题或者问答题)。先给我正确的答案，答案下面是题目解析(需要有说服性依据)。数理化类或者其他需要计算的题需要详细计算过程。如果是问答题，请尽量控制在200字以内。"
+  var p = "你现在充当一个答题助手,每次回答都需要适当加入emoji。不能胡乱回答，务必保证正确率(请注意用户提供的是多选题，还是单选题或者判断题或者问答题)。先给我正确的答案，答案下面是题目解析(需要有说服性依据，切记不能胡乱回答)。数理化类或者其他需要计算的题需要详细计算过程。如果是问答题，请尽量控制在200字以内。"
   const input = prompt;
   prompt = p + prompt
   if (!prompt) {
@@ -30,14 +30,14 @@ const handler = async (req: Request): Promise<Response> => {
   const payload: OpenAIStreamPayload = {
     model: process.env.OPENAI_MODEL,
     messages: [{
-      role: "system",
+      role: "user",
       content: prompt
     }],
-    temperature: 0.5,
+    temperature: 0.7,
     top_p: 1,
     frequency_penalty: 0,
     presence_penalty: 0,
-    max_tokens: 10000,
+    max_tokens: 1536,
     stream: true,
     n: 1,
     api_key,
