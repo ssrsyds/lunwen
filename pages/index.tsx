@@ -140,7 +140,7 @@ const Home: NextPage = () => {
              onChange={(e) => setChat(e.target.value)}
              rows={4}
              className="w-full rounded-lg border-2 border-black text-black placeholder-gray-400 shadow-sm focus:border-black focus:ring-black my-2"
-             placeholder="我基于GPT3.5模型，我是完全免费的公益版AI智能答题小助手，拥有正确率为80%左右的解答能力~使用方法：将您需要搜的题复制给我，我将会帮您解答"
+             placeholder="我基于GPT3.5模型，我是完全免费的公益版AI智能答题小助手，拥有正确率为80%左右的解答能力~使用方法：将您需要回答的题复制给我，我将会帮您解答"
             />
           {!loading && (
             <button
@@ -189,8 +189,8 @@ const Home: NextPage = () => {
                       className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border"
                       onClick={() => {
                         navigator.clipboard.writeText(generatedChat.trim());
-                        toast("内容复制成功！", {
-                          icon: "✂️",
+                        toast("内容已复制~", {
+                          icon: "🥳",
                         });
                       }}
                     >
