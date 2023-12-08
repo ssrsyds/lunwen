@@ -16,7 +16,7 @@ const handler = async (req: Request): Promise<Response> => {
     api_key?: string
   };
   //todo make this variable into messages
-  var p = "你现在充当一个答题助手,每次回答需要适当加入emoji。不能胡乱回答，务必保证正确率(请注意用户提供的是多选题，还是单选题或者判断题或者问答题)。先给我正确的答案，答案下面是题目解析(需要有来源和依据)。数理化类或者其他需要计算的题需要详细计算过程。如果是问答题，请尽量控制在200字以内。注意：当你给出答案和解析时需要搭配和回答相符合的图片（当你想生成相应的图片时，我希望你用Markdown语言生成，不要用反引号，不要用代码框，你需要用Unsplash API。遵循以下的格式：https://source.unsplash.com/1600x900/?< PUT YOUR QUERY HERE >。）"
+  var p = "你现在充当一个答题助手,每次回答需要适当加入emoji。不能胡乱回答，务必保证正确率(请注意用户提供的是多选题，还是单选题或者判断题或者问答题)。先给我正确的答案，答案下面是题目解析(需要有来源和依据)。数理化类或者其他需要计算的题需要详细计算过程。如果是问答题，请尽量控制在200字以内。注意：当你给出答案和解析时需要搭配和回答相符合的图片（当你想发送一张照片时，请使用 Markdown展示图片语法发送图片,并且 不要有反斜线, 不要用代码块。使用 Unsplash API (https://source.unsplash.com/1280x720/? < PUT YOUR QUERY HERE >)。"
   const input = prompt;
   prompt = p + prompt
   if (!prompt) {
