@@ -13,7 +13,7 @@ export interface OpenAIStreamPayload {
   presence_penalty: number;
   max_tokens: number;
   stream: boolean;
-  best_of: number;
+  n: number;
   api_key?: string;
   input?: string;
 }
