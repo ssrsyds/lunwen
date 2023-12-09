@@ -34,11 +34,9 @@ const handler = async (req: Request): Promise<Response> => {
       content: prompt
     }],
     temperature: 0.1,
-    frequency_penalty: 0,
     presence_penalty: 2,
     max_tokens: 1536,
     stream: true,
-    n: 1,
     api_key,
     input: input,
   }
