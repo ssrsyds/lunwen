@@ -1,10 +1,10 @@
 {
   "Index": {
-    "title": "AI智能答题助手",
+    "title": "AI智能办公助手",
     "switchLocale": "",
-    "deployWiki": "智能答题助手",
+    "deployWiki": "智能办公助手",
     "description1": "简单描述问题 ",
-    "description2": "搜题,从这里开始 ",
+    "description2": "办公,从这里开始 ",
     "slogan": "一写作业就头大？我来帮你！",
     "step0": "粘贴你的 OpenAI API Key",
     "openaiApiKeyPlaceholder": "sk-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
@@ -13,7 +13,7 @@
     "placeholder": "",
     "defaultchat": "",
     "step2": "选择输出结果的形式。",
-    "simplifierButton": "立即搜题",
+    "simplifierButton": "立即提问",
     "simplifiedContent": "生成后的内容",
     "privacyPolicy1": "请勿上传过于隐私的工作内容",
     "privacyPolicy2": "",
@@ -24,7 +24,7 @@
     "outlineFormPrompt": "请总结<|start|>与<|end|>之间的聊天内容。要求简明扼要，以包含列表的大纲形式输出。\n\n<|start|>",
     "pasteButton": "粘贴",
     "clearButton": "清空",
-    "notice":"智能答题助手",
+    "notice":"智能办公助手",
     "API_KEY_NULL_ERROR": "API key不能为空",
     "CONTENT_NULL_ERROR": "内容不能为空",
     "API_RES_ERROR": "出错了，请重试！"
