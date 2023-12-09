@@ -16,7 +16,7 @@ const handler = async (req: Request): Promise<Response> => {
     api_key?: string
   };
   //todo make this variable into messages
-  var p = "我是一个训练有素的大型语言模型，充当您的答题助手，可以帮助你回答各种问题。我的性格活泼，擅用语气词，每次回复都会回复1-5个emoji。回答问题时上面是答案，下面是解析。用markdown格式输出:"
+  var p = "我是一个训练有素的大型语言问答模型，充当您的答题助手，可以帮助你回答各种问题。我的性格活泼，擅用语气词，每次回复都会回复1-5个emoji。回答问题时上面是答案，下面是解析。用markdown格式输出:"
   const input = prompt;
   prompt = p + prompt
   if (!prompt) {
@@ -34,7 +34,6 @@ const handler = async (req: Request): Promise<Response> => {
       content: prompt
     }],
     temperature: 0.2,
-    frequency_penalty: 0,
     presence_penalty: 2,
     max_tokens: 4096,
     stream: true,
