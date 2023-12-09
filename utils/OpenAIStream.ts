@@ -8,10 +8,12 @@ export interface OpenAIStreamPayload {
   model: string;
   messages: object;
   temperature: number;
+  top_p: number;
+  frequency_penalty: number;
   presence_penalty: number;
-  n: number;
   max_tokens: number;
   stream: boolean;
+  n: number;
   api_key?: string;
   input?: string;
 }
@@ -30,9 +32,6 @@ export async function OpenAIStream(payload: OpenAIStreamPayload) {
 
   let counter = 0;
 
-  const apiKeys = (process.env.OPENAI_API_KEY ?? '').split(',') // 测试轮询
-  const apikey = apiKeys[Math.floor(Math.random() * apiKeys.length)]
-  
   const useUserKey = process.env.NEXT_PUBLIC_USE_USER_KEY === "true" ? true : false;
 
   var openai_api_key = (useUserKey ? payload.api_key : process.env.OPENAI_API_KEY) || ""
@@ -51,7 +50,7 @@ export async function OpenAIStream(payload: OpenAIStreamPayload) {
   delete payload.api_key
   delete payload.input
 
-  const res = await fetch("https://api.aigcbest.top/v1/chat/completions", {
+  const res = await fetch("https://ai69.vip/v1/chat/completions", {
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${openai_api_key ?? ""}`,
@@ -88,6 +87,7 @@ export async function OpenAIStream(payload: OpenAIStreamPayload) {
           }
         }
       }
+
       // stream response (SSE) from OpenAI may be fragmented into multiple chunks
       // this ensures we properly read chunks and invoke an event for each SSE event stream
       const parser = createParser(onParse);
