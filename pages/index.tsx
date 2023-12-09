@@ -111,7 +111,7 @@ const Home: NextPage = () => {
 
       <Header />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">
-      <img src="http://tc.lzlspyxgs.asia/zly/1.png" alt="Your Image" style={{ width: '235px', height: '65px', marginRight: '5px' }} />
+      <img src="https://linglu.pro/public/linglu.png" alt="Your Image" style={{ width: '160px', height: '65px', marginRight: '5px' }} />
         <div className="max-w-xl w-full">
         { useUserKey &&(
             <>
