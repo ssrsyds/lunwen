@@ -10,7 +10,6 @@ export interface OpenAIStreamPayload {
   temperature: number;
   presence_penalty: number;
   max_tokens: number;
-  best_of: number;
   stream: boolean;
   api_key?: string;
   input?: string;
@@ -30,6 +29,9 @@ export async function OpenAIStream(payload: OpenAIStreamPayload) {
 
   let counter = 0;
 
+  const apiKeys = (process.env.OPENAI_API_KEY ?? '').split(',') // 测试轮询
+  const apikey = apiKeys[Math.floor(Math.random() * apiKeys.length)]
+  
   const useUserKey = process.env.NEXT_PUBLIC_USE_USER_KEY === "true" ? true : false;
 
   var openai_api_key = (useUserKey ? payload.api_key : process.env.OPENAI_API_KEY) || ""
