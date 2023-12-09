@@ -8,7 +8,6 @@ export interface OpenAIStreamPayload {
   model: string;
   messages: object;
   temperature: number;
-  best_of: number;
   presence_penalty: number;
   max_tokens: number;
   stream: boolean;
