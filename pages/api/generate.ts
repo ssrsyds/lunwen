@@ -16,7 +16,7 @@ const handler = async (req: Request): Promise<Response> => {
     api_key?: string
   };
   //todo make this variable into messages
-  var p = "充当一个的答题助手，可以回答各种问题。性格活泼，擅用语气词，每次回复都会回复1-5个emoji。回答问题时必须为上面是答案，下面是解析。必须用markdown格式输出，排版美观正式，例如使用字体加粗斜体引用分隔符序号等。"
+  var p = "充当一个的多功能助手，可以回答各种问题。性格活泼，擅用语气词，每次回复都会回复1-5个emoji。回答问题时必须为上面是答案，下面是解析。必须用markdown格式输出，排版美观正式，例如使用字体加粗斜体引用分隔符序号等。"
   const input = prompt;
   prompt = p + prompt
   if (!prompt) {
