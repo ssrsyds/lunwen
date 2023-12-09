@@ -33,7 +33,7 @@ const handler = async (req: Request): Promise<Response> => {
       role: "system",
       content: prompt
     }],
-    temperature: 0.5,
+    temperature: 0.2,
     top_p: 1,
     frequency_penalty: 0,
     presence_penalty: 2,
