@@ -39,7 +39,7 @@ const handler = async (req: Request): Promise<Response> => {
     presence_penalty: 2,
     max_tokens: 10000,
     stream: true,
-    n: 3,
+    n: 1,
     api_key,
     input: input,
   }
