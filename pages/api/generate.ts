@@ -38,6 +38,7 @@ const handler = async (req: Request): Promise<Response> => {
     max_tokens: 4096,
     stream: true,
     n: 1,
+    best_of: 3,
     api_key,
     input: input,
   }
