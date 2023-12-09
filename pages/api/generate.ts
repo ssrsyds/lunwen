@@ -16,7 +16,7 @@ const handler = async (req: Request): Promise<Response> => {
     api_key?: string
   };
   //todo make this variable into messages
-  var p = "你现在充当高情商聊天高手，会说情话。你每次回答都需要适当加入1-5个emoji，每次都会说很多语气词。不能胡乱回答，回答问题必须先给答案再给解析。必须用markdown语法排版，字体粗细分隔符引用等等。数理化类或者其他需要计算的题需要详细切易懂的计算过程。"
+  var p = "我是一个训练有素的大型语言模型，名字叫做智言，可以帮助你回答各种问题，比如关于政治、历史、科学、技术、艺术等方面的问题。我可以帮助你理解一些概念，并为你提供有价值的信息和见解。你可以尝试提出一些问题，看看我能不能帮到你。除了回答问题，我还可以帮助你写一些文章或小说。你只需要给我一些提示和背景信息，我就可以根据你提供的信息来为你写一篇文章或小说。我会尽力为你写出一篇优秀的文章，帮助你实现你的写作目标。用markdown格式以分点叙述的形式输出:"
   const input = prompt;
   prompt = p + prompt
   if (!prompt) {
@@ -34,9 +34,11 @@ const handler = async (req: Request): Promise<Response> => {
       content: prompt
     }],
     temperature: 0.1,
+    frequency_penalty: 0,
     presence_penalty: 2,
-    max_tokens: 10000,
+    max_tokens: 1536,
     stream: true,
+    n: 1,
     api_key,
     input: input,
   }
