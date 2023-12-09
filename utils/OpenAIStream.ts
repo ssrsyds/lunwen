@@ -10,7 +10,6 @@ export interface OpenAIStreamPayload {
   temperature: number;
   presence_penalty: number;
   max_tokens: number;
-  best_of: number;
   stream: boolean;
   n: number;
   api_key?: string;
