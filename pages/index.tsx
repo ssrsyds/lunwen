@@ -162,8 +162,6 @@ const Home: NextPage = () => {
              本产品基于
              <a href="https://ai1.yjie.fun/" style={{ color: 'lightblue' }}>《天工智能AI助手》</a>研发
            </div>
-          <br></br>
-          <br></br>
           {loading && (
             <button
               className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
@@ -173,6 +171,8 @@ const Home: NextPage = () => {
             </button>
           )}
         </div>
+          <br></br>
+          <br></br>
         <Toaster
           position="top-center"
           reverseOrder={false}
