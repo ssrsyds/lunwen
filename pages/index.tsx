@@ -170,8 +170,6 @@ const Home: NextPage = () => {
               <LoadingDots color="white" style="large" />
             </button>
           )}
-          <br></br>
-          <br></br>
         </div>
         <Toaster
           position="top-center"
