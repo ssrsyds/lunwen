@@ -136,12 +136,13 @@ const Home: NextPage = () => {
           
 
           <textarea
-             value={chat}
-             onChange={(e) => setChat(e.target.value)}
-             rows={4}
-             className="w-full rounded-lg border-2 border-black text-black placeholder-gray-400 shadow-sm focus:border-black focus:ring-black my-2"
-             placeholder="我基于GPT3.5模型，我是完全免费的公益版AI智能办公小助手，将您需要回答的问题发给我，我将会帮您解答"
-            />
+            value={chat}
+            onChange={(e) => setChat(e.target.value)}
+            rows={4}
+            className="w-full rounded-lg border-2 border-black text-black placeholder-gray-400 shadow-sm focus:border-black focus:ring-black my-2"
+            placeholder="我基于GPT3.5模型，我是完全免费的公益版AI智能办公小助手，将您需要回答的问题发给我，我将会帮您解答"
+            autoComplete="off"
+          />
           {!loading && (
             <button
             className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-5 mt-8 hover:bg-black/80 w-full"
