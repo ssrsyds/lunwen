@@ -48,7 +48,7 @@ export async function OpenAIStream(payload: OpenAIStreamPayload) {
   delete payload.api_key
   delete payload.input
 
-  const res = await fetch("https://ai69.vip/v1/chat/completions", {
+  const res = await fetch("https://one.caifree.com/v1/chat/completions", {
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${openai_api_key ?? ""}`,
