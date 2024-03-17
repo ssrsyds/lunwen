@@ -140,7 +140,7 @@ const Home: NextPage = () => {
             onChange={(e) => setChat(e.target.value)}
             rows={4}
             className="w-full rounded-lg border-2 border-black text-black placeholder-gray-400 shadow-sm focus:border-black focus:ring-black my-2"
-            placeholder="我是GPT指令生成助手，让GPT更好的为您工作~"
+            placeholder="不会提问？GPT回答的不满意？输入您需要AI回答的问题，让我生成更专业的提问指令~"
           />
           {!loading && (
             <button
