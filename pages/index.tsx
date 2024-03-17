@@ -140,7 +140,7 @@ const Home: NextPage = () => {
             onChange={(e) => setChat(e.target.value)}
             rows={4}
             className="w-full rounded-lg border-2 border-black text-black placeholder-gray-400 shadow-sm focus:border-black focus:ring-black my-2"
-            placeholder="我基于GPT3.5模型，我是完全免费的公益版AI智能办公小助手，将您需要回答的问题发给我，我将会帮您解答"
+            placeholder="我是GPT指令生成助手，让GPT更好的为您工作~"
           />
           {!loading && (
             <button
@@ -187,7 +187,7 @@ const Home: NextPage = () => {
                       className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border"
                       onClick={() => {
                         navigator.clipboard.writeText(generatedChat.trim());
-                        toast("内容已复制~", {
+                        toast("指令已复制~", {
                           icon: "🫣",
                         });
                       }}
